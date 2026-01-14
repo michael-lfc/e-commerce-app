@@ -16,26 +16,11 @@ const app = express();
 // Connect to MongoDB Atlas
 connectDB();
 
-// Middleware
-// app.use(cors({
-//   origin: "http://localhost:5173", // allow your frontend
-//   credentials: true // if you want cookies/auth headers
-// }));
-
-// app.use(
-//   cors({
-//     origin:
-//       process.env.NODE_ENV === "production"
-//         ? process.env.FRONTEND_URL
-//         : "http://localhost:5173",
-//     credentials: true,
-//   })
-// );
 
 // Allowed origins for CORS
 const allowedOrigins = [
   "http://localhost:5173",              // local frontend
-  "https://e-commerce-app-weld-rho.vercel.app/"    // deployed frontend (update later)
+  "https://e-commerce-app-weld-rho.vercel.app"    // deployed frontend (update later)
 ];
 
 // CORS middleware (callback-free)
