@@ -8,9 +8,9 @@ This project was developed as part of my Full Stack Software Engineering trainin
 
 ## 🚀 Live Demo
 
-- **Frontend:** [E-commerce App](https://e-commerce-app-weld-rho.vercel.app/)  
-- **Backend API:** [API Server](https://e-commerce-app-9o65.onrender.com)  
-- **GitHub Repo:** [michael-lfc/e-commerce-app](https://github.com/michael-lfc/e-commerce-app)
+- **Frontend:** https://e-commerce-app-weld-rho.vercel.app/  
+- **Backend API:** https://e-commerce-app-9o65.onrender.com  
+- **GitHub Repo:** https://github.com/michael-lfc/e-commerce-app
 
 ---
 
