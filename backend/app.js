@@ -13,20 +13,25 @@ import adminRoutes from "./routes/admin.routes.js";
 
 const app = express();
 
+// Connect to MongoDB Atlas
+connectDB();
+
 // Middleware
 // app.use(cors({
 //   origin: "http://localhost:5173", // allow your frontend
 //   credentials: true // if you want cookies/auth headers
 // }));
 
-// Connect to MongoDB Atlas
-connectDB();
+app.use(
+  cors({
+    origin:
+      process.env.NODE_ENV === "production"
+        ? process.env.FRONTEND_URL
+        : "http://localhost:5173",
+    credentials: true,
+  })
+);
 
-// Middleware
-app.use(cors({
-  origin: "http://localhost:5173", // allow your frontend
-  credentials: true // if you want cookies/auth headers
-}));
 
 // Middleware
 app.use(express.json());
