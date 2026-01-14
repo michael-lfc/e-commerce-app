@@ -22,16 +22,29 @@ connectDB();
 //   credentials: true // if you want cookies/auth headers
 // }));
 
+// app.use(
+//   cors({
+//     origin:
+//       process.env.NODE_ENV === "production"
+//         ? process.env.FRONTEND_URL
+//         : "http://localhost:5173",
+//     credentials: true,
+//   })
+// );
+
+// Allowed origins for CORS
+const allowedOrigins = [
+  "http://localhost:5173",              // local frontend
+  "https://your-frontend.vercel.app"    // deployed frontend (update later)
+];
+
+// CORS middleware (callback-free)
 app.use(
   cors({
-    origin:
-      process.env.NODE_ENV === "production"
-        ? process.env.FRONTEND_URL
-        : "http://localhost:5173",
-    credentials: true,
+    origin: allowedOrigins,  // array of allowed origins
+    credentials: true
   })
 );
-
 
 // Middleware
 app.use(express.json());
