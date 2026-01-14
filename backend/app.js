@@ -35,7 +35,7 @@ connectDB();
 // Allowed origins for CORS
 const allowedOrigins = [
   "http://localhost:5173",              // local frontend
-  "https://your-frontend.vercel.app"    // deployed frontend (update later)
+  "https://e-commerce-app-weld-rho.vercel.app/"    // deployed frontend (update later)
 ];
 
 // CORS middleware (callback-free)
